@@ -13,6 +13,8 @@ from . import app  # Import Flask application
 ############################################################
 # Health Endpoint
 ############################################################
+
+
 @app.route("/health")
 def health():
     """Health Status"""
@@ -22,6 +24,8 @@ def health():
 ######################################################################
 # GET INDEX
 ######################################################################
+
+
 @app.route("/")
 def index():
     """Root URL response"""
@@ -38,6 +42,8 @@ def index():
 ######################################################################
 # CREATE A NEW ACCOUNT
 ######################################################################
+
+
 @app.route("/accounts", methods=["POST"])
 def create_accounts():
     """
@@ -60,6 +66,8 @@ def create_accounts():
 ######################################################################
 # LIST ALL ACCOUNTS
 ######################################################################
+
+
 @app.route("/accounts", methods=["GET"])
 def list_account():
     """
@@ -77,6 +85,8 @@ def list_account():
 ######################################################################
 # READ AN ACCOUNT
 ######################################################################
+
+
 @app.route("/accounts/<id>", methods=["GET"])
 def read_account(id):
     """
@@ -96,7 +106,7 @@ def read_account(id):
 # UPDATE AN EXISTING ACCOUNT
 ######################################################################
 
-# ... place you code here to UPDATE an account ...
+
 @app.route("/accounts/<id>", methods=["PUT"])
 def update_account(id):
     """
@@ -117,6 +127,8 @@ def update_account(id):
 ######################################################################
 # DELETE AN ACCOUNT
 ######################################################################
+
+
 @app.route("/accounts/<id>", methods=["DELETE"])
 def delete_account(id):
     """
@@ -125,7 +137,6 @@ def delete_account(id):
     """
     app.logger.info("Request to delete an Account with id: %s", id)
 
-    
     account = Account.find(id)
     if account:
         account.delete()
