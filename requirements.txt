@@ -2,6 +2,7 @@
 Werkzeug==2.1.2
 
 # Runtime dependencies
+Flask-Talisman
 Flask==2.1.2
 Flask-SQLAlchemy==2.5.1
 psycopg2-binary==2.9.3
