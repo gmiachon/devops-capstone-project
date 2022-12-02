@@ -98,5 +98,3 @@ spec:
           oc get pods -l app=accounts
       runAfter:
         - build
-
-  
